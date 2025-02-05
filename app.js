@@ -17,7 +17,7 @@ DB();
 app.use(express.json());
 app.use(cookie_parser());
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
     credentials: true  // enable setting of cookies in response headers
   }));
 
