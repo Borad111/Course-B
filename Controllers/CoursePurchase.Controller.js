@@ -139,7 +139,10 @@ const stripeWebhook = async (req, res) => {
       return res.status(500).json({ message: "Internal Server Error" });
     }
   }
-  res.status(200).send();
+  res.status(200).send({
+     success: true,
+    message: "Webhook processed successfully"
+  });
 };
 
 const GetCourseDetailsWithParchaseStatus = async (req, res) => {
